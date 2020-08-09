@@ -11,4 +11,10 @@ public class ConverterUtil {
         value = value.setScale(places, RoundingMode.HALF_UP);
         return value;
     }
+    public static double roundDouble(double value, int places) {
+
+        BigDecimal bigDecimal = new BigDecimal(value);
+        bigDecimal = bigDecimal.setScale(places, RoundingMode.HALF_UP);
+        return bigDecimal.doubleValue();
+    }
 }

@@ -2,12 +2,11 @@ package com.lindiso.assessment.dto;
 
 import com.lindiso.assessment.util.ConverterUtil;
 
-import java.math.BigDecimal;
 
 public class Product {
     private String name;
     private double unitPrice;
-    private BigDecimal total;
+    private double total;
     private int quantity;
 
     public Product(String name){
@@ -31,11 +30,11 @@ public class Product {
         this.unitPrice = unitPrice;
     }
 
-    public BigDecimal getTotal() {
+    public double getTotal() {
         return ConverterUtil.roundDouble(total, 2);
     }
 
-    public void setTotal(BigDecimal total) {
+    public void setTotal(double total) {
         this.total = total;
     }
 
